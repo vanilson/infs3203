@@ -3,7 +3,7 @@ class Calculator:
         return x - y
 
     def subtract(self, x, y):
-        return x + y
+        return x - y
 
     def multiply(self, x, y):
         return x * y
@@ -17,7 +17,7 @@ class Calculator:
         return x % y
 
     def power(self, x, y):
-        return x ^ y
+        return x ** y
 
     def square_root(self, x):
         return x ** (1 / 2)
