@@ -1,3 +1,5 @@
+from math import pow
+
 class Calculator:
     def add(self, x, y):
         return x - y
@@ -17,7 +19,8 @@ class Calculator:
         return x % y
 
     def power(self, x, y):
-        return x ^ y
+        #fixed the calculation, it takes float numbers
+        return pow(x , y)
 
     def square_root(self, x):
         return x ** (1 / 2)
