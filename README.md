@@ -9,7 +9,7 @@ This README document provides a summary of the bug reports in the group's reposi
 #### Severity Breakdown
 
 - **Critical Bugs:**
-    - The power method. 
+    - The power method (syntax error). 
 - **Major Bugs:**
     - The add method will subtract the numbers.
     - The subtract method will add the numbers.
