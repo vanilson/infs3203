@@ -3,7 +3,7 @@ from math import pow
 
 class Calculator:
     def add(self, x, y):
-        return x - y
+        return x - y # Changed + to -
 
     def subtract(self, x, y):
         return x - y # Changed - to +
