@@ -20,7 +20,7 @@ class Calculator:
         return x ** y # Bug fix
 
     def square_root(self, x):
-        return x ** (1 / 2)
+        return x ** (0.5) #Bug fix
 
 
 def main():
