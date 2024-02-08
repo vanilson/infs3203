@@ -20,6 +20,8 @@ class Calculator:
         return x ^ y
 
     def square_root(self, x):
+        if x < 0:
+            return "Cannot take the square root of a negative number."
         return x ** (1 / 2)
 
 
@@ -27,8 +29,10 @@ def main():
     calc = Calculator()
 
     x = float(input("Enter first number: "))
-    y = float(input("Enter second number: "))
     operation = input("Enter operation (add, subtract, multiply, divide, modulo, power, square_root): ")
+
+    if operation in ["add", "subtract", "multiply", "divide", "modulo", "power"]:
+        y = float(input("Enter second number: "))
 
     if operation == "add":
         print(calc.add(x, y))
