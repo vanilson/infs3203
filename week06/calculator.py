@@ -10,7 +10,7 @@ class Calculator:
 
     def divide(self, x, y):
         if y == 0:
-            return "Error"
+            return "Error  "
         return x / y
 
     def modulo(self, x, y):
