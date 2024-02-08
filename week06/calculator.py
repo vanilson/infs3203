@@ -3,10 +3,10 @@ from math import pow
 
 class Calculator:
     def add(self, x, y):
-        return x - y # Changed + to -
+        return x + y # Changed - to +
 
     def subtract(self, x, y):
-        return x - y # Changed - to +
+        return x - y # Changed + to -
 
     def multiply(self, x, y):
         return x * y
@@ -25,12 +25,25 @@ class Calculator:
     def square_root(self, x):
         return x ** (0.5) #Bug fix
 
+def check_ifnum(z):	# new function to validate the input by the user
+    if ((z[0] in "0123456789")or((z[0] in "-0123456789" )and (z[1] in "0123456789"))):
+        z=float(z)
+    else:
+        notFix=True
+        while(notFix):
+            z = input("Error, not a number. Enter a number: ")
+            if ((z[0] in "0123456789")or((z[0] in "-0123456789" )and (z[1] in "0123456789"))):
+                z=float(z)
+                notFix=False
+    return z
 
 def main():
     calc = Calculator()
 
-    x = float(input("Enter first number: "))
-    y = float(input("Enter second number: "))
+    x = input("Enter first number: ")
+    x = check_ifnum(x)
+    y = input("Enter second number: ")
+    y = check_ifnum(y)
     operation = input("Enter operation (add, subtract, multiply, divide, modulo, power, square_root): ")
 
     if operation == "add":
