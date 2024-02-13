@@ -15,19 +15,33 @@ def test_multiply():
 def test_divide():
     calc = Calculator()
     assert calc.divide(6, 3) == 2, "Division method failed"
-    assert calc.divide(5, 0) == "Cannot divide by zero", "Division by zero failed"
+    try:
+        calc.divide(5, 0)
+        assert False, "Expected ValueError for division by zero"
+    except ValueError:
+        pass  # Expected exception
 
 def test_modulo():
     calc = Calculator()
     assert calc.modulo(5, 2) == 1, "Modulo method failed"
+    try:
+        calc.modulo(5, 0)
+        assert False, "Expected ValueError for modulo by zero"
+    except ValueError:
+        pass  # Expected exception
 
 def test_power():
     calc = Calculator()
-    assert calc.power(2, 3) == 8, "Power method failed"  # This will fail; see note below
+    assert calc.power(2, 3) == 8, "Power method failed"
 
 def test_square_root():
     calc = Calculator()
     assert abs(calc.square_root(4) - 2) < 1e-9, "Square root method failed"
+    try:
+        calc.square_root(-1)
+        assert False, "Expected ValueError for square root of negative number"
+    except ValueError:
+        pass  # Expected exception
 
 if __name__ == "__main__":
     test_add()
