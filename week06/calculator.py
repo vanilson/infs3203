@@ -3,7 +3,7 @@ class Calculator:
         return x + y
 
     def subtract(self, x, y):
-        return x + y
+        return x - y #Bug fix,synatx error was found. changed the operation from "+" to "-"
 
     def multiply(self, x, y):
         return x * y
