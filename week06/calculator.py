@@ -17,6 +17,8 @@ class Calculator:
     '''This function returns the float of subtracting two float operands
         :param x: x is the first float or an int number
         :param y: y is the second float or an int number
+    def subtract(self, x, y):
+        return x - y #Bug fix,synatx error was found. changed the operation from "+" to "-"
 
         #Bug(s) fixed
          -changed the operator from - to +
